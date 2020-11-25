@@ -1,14 +1,14 @@
 # Sample repository
 
-This repository demonstrates an integration between two different third-party CI services, `circleci` and `mergequeue`.
+This repository demonstrates an integration between two different third-party CI services, `circleci` and `mergify`.
 
 - `circleci` runs tests.
-- `mergequeue` manages concurrent pull-requests.
+- `mergify` manages concurrent pull-requests.
 
 ## `circleci`
 
 Configuration of this service is centralized in `.circleci/config.yml`.
 
-## `mergequeue`
+## `mergify`
 
-Rules for this service are managed through a Github Application dashboard accessible through github.
+Integration is a work in progress.
