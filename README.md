@@ -11,4 +11,8 @@ Configuration of this service is centralized in `.circleci/config.yml`.
 
 ## `mergify`
 
-Integration is a work in progress.
+A merge queue is managed by `mergify`. Configuration is centralized in `.mergify.yml`.
+
+### Rules
+
+If a pull-request is labeled with "on-merge-queue" that pull-request will be merged, regardless of the number of commits included. Please rebase prior to adding to merge queue! If you don't, your commits will be deleted from upstream.
