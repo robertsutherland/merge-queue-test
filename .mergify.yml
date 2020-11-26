@@ -1,0 +1,24 @@
+pull_request_rules:
+  - name: high priority merge of hotfix branches
+    conditions:
+      - check-success="ci/circleci"
+      - base=main
+      - label=hotfix
+    actions:
+      merge:
+        method: rebase
+        strict: smart
+        strict_method: rebase
+        priority: high
+        
+  - name: regular priority branch
+    conditions:
+      - check-success="ci/circleci"
+      - base=main
+      - label=on-merge-queue
+    actions:
+      merge:
+        method: rebase
+        strict: smart
+        strict_method: rebase
+        priority: medium
