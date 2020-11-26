@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: high priority merge of hotfix branches
     conditions:
-      - check-success="ci/circleci"
+      - "check-success=ci/circleci: build-and-test"
       - base=main
       - label=hotfix
     actions:
@@ -13,7 +13,7 @@ pull_request_rules:
         
   - name: regular priority branch
     conditions:
-      - check-success="ci/circleci"
+      - "check-success=ci/circleci: build-and-test"
       - base=main
       - label=on-merge-queue
     actions:
