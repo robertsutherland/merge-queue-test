@@ -1,3 +1,6 @@
+from pytest import mark
+
+
 ANSWER_TO_THE_GREAT_QUESTION = 42
 
 
@@ -6,6 +9,6 @@ def test_example():
     assert ANSWER_TO_THE_GREAT_QUESTION == 42, \
         "What's the answer to the great question?"
 
- 
+@mark.skip(reason="demonstration")
 def test_another_example():
     assert False, "It works!"
