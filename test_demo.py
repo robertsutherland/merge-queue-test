@@ -11,4 +11,4 @@ def test_example():
 
 @mark.skip(reason="demonstration")
 def test_another_example():
-    assert False, "It works!"
+    assert True, "It works!"
