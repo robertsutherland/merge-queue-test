@@ -10,4 +10,4 @@ def test_example():
         "What's the answer to the great question?"
 
 def test_another_example():
-    assert True, "It works!"
+    assert False, "It don't works!"
