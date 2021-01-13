@@ -22,3 +22,12 @@ pull_request_rules:
         strict: smart
         strict_method: rebase
         priority: medium
+
+  - name: remove on-merge-queue label after failure
+    conditions:
+      - "check-success!=ci/circleci: build-and-test"
+      - base=main
+      - label=on-merge-queue
+    actions:
+      label:
+        remove: [on-merge-queue]
