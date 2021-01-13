@@ -35,5 +35,5 @@ pull_request_rules:
       - label=on-merge-queue
     actions:
       label:
-        remove: [on-merge-queue]
+        remove: [on-merge-queue,ready-for-review]
         add: [work-in-progress]
