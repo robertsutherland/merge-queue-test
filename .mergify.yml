@@ -10,6 +10,8 @@ pull_request_rules:
         strict: smart
         strict_method: rebase
         priority: high
+      label:
+        remove: [on-merge-queue,ready-for-review]
         
   - name: regular priority branch
     conditions:
@@ -22,6 +24,9 @@ pull_request_rules:
         strict: smart
         strict_method: rebase
         priority: medium
+      label:
+        remove: [on-merge-queue,ready-for-review]
+
 
   - name: remove on-merge-queue label after failure
     conditions:
@@ -31,3 +36,4 @@ pull_request_rules:
     actions:
       label:
         remove: [on-merge-queue]
+        add: [work-in-progress]
